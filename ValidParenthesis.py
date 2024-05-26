@@ -41,7 +41,7 @@ def checkParenthesisType(opening:str, closing:str) -> bool:
     return False
         
 def main():
-    print(isValid("("))
+    print(isValid("()"))
     
 if __name__ == "__main__":
     main()
