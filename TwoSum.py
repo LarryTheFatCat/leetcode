@@ -22,10 +22,15 @@ Example 3:
 Input: nums = [3,3], target = 6
 Output: [0,1]
 """
-class Solution:
-    def twoSum(self, nums: List[int], target: int) -> List[int]:
-        for j in range(len(nums)):
-            for i in range(j + 1, len(nums)):
-                if nums[i] + nums[j] == target:
-                    return [i,j]
+def twoSum(nums: list[int], target: int) -> list[int]:
+    for j in range(len(nums)):
+        for i in range(j + 1, len(nums)):
+            if nums[i] + nums[j] == target:
+                return [i,j]
+            
+def main():
+    print(twoSum([1,2,3],3))
 
+
+if __name__ == "__main__":
+    main()
