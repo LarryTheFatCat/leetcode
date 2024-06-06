@@ -1,9 +1,16 @@
 def reverseSort(list:list[int]) -> list[int]:
+    """
+    Takes in list storing integer values, returns reverse order of list (unsorted, just reversed)
+    
+    >>> [1,2,3,4]
+    4,3,2,1
+    
+    >>> [2,4,5,1]
+    1,5,4,2
+    
+    """
     left = 0
-    right = 0
-    for numbers in list:
-        if numbers.isdigit():
-            right += 1
+    right = len(list) - 1
     
     while (left < right):
         # Swap
@@ -14,8 +21,16 @@ def reverseSort(list:list[int]) -> list[int]:
         right -= 1
     return list
 
-def addTwoNumbers(l1, l2):
-    # reverse sort algorithm
+def addTwoNumbers(l1:list[int], l2:list[int]) -> list[int]:
+    """
+    takes in 2 lists that store integers, returns the reverse sum order of list
+    
+    >>> addTwoNumbers([2,4,3],[5,6,4])
+    789
+    
+    >>> addTwoNumbers([1,2,3],[5,6,7])
+    6801
+    """
     sorted_reverse_l1 = reverseSort(l1)
     sorted_reverse_l2 = reverseSort(l2)
     l1_string = ''.join(map(str,sorted_reverse_l1))
