@@ -1,20 +1,16 @@
 def lengthOfLastWord(s:str) -> int:
     """
-    Iterates through string, returns length of last word
-    
-    >>> lengthOfLastWord("Hello World")
-    5
-    
-    >>> lengthOfLastWord("John Paul")
-    4
+    :type s: str
+    :rtype: int
     """
-    current_string = s.split()
-    return len(current_string[-1])
-    
-
+    split_string = s.split()
+    for words in range(len(split_string)):
+        return len(split_string[words - 1])
+        
 
 def main():
-    print(lengthOfLastWord("luffy is still joyboy"))
-    
+    print(lengthOfLastWord("   fly me   to   the moon  "))
+
 if __name__ == "__main__":
     main()
+    
