@@ -13,7 +13,7 @@ if __name__ == "__main__":
     main()
     
 """
-This is probably brute force??? 
+Brute Force
 I'll update the solution when I figure out how I can implement binary search lol
 """
 
